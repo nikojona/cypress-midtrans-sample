@@ -1,0 +1,14 @@
+{
+  "name": "cy-eduwork",
+  "version": "1.0.0",
+  "description": "Training for eduwork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nickolas Jonathan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.8.1"
+  }
+}
