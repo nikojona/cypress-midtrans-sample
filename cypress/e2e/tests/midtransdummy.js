@@ -40,7 +40,7 @@ describe('My first test', () => {
             const $body = $element.contents().find('body')
             let stripe = cy.wrap($body)
 
-            // Gopay
+            // BCA
             stripe.find('[alt="BCA"]').click()
             stripe = cy.wrap($body)
             stripe.find('[class="bank-list-layout"]').then(paymentList => {
@@ -68,8 +68,8 @@ describe('My first test', () => {
             const $body = $element.contents().find('body')
             let stripe = cy.wrap($body)
 
-            // Gopay
-            stripe.find('[alt="BCA"]').click()
+            // Mandiri
+            stripe.find('[alt="Mandiri"]').click()
             stripe = cy.wrap($body)
             stripe.find('[class="bank-list-layout"]').then(paymentList => {
                 cy.get(paymentList).find('[class="bank-list"]').eq(1).then(mandiri => {
@@ -82,6 +82,7 @@ describe('My first test', () => {
                     // stripe.find('[class="btn full primary"]').click()
                     cy.wait(2000)
 
+                    // Select ATM option
                     stripe = cy.wrap($body)
                     stripe.find('[class="content pay-instruction opened"]').then(instructionList => {
                         cy.get(instructionList).find('[class="collapsible instruction"]').eq(0).then(atm => {
